@@ -27,7 +27,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "sample.dynatrace.crossplane.io"
+	Group   = "management.dynatrace.crossplane.io"
 	Version = "v1alpha1"
 )
 

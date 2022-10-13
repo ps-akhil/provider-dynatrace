@@ -5,7 +5,7 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: null
-  name: mytypes.sample.dynatrace.crossplane.io
+  name: onboardings.sample.dynatrace.crossplane.io
 spec:
   group: sample.dynatrace.crossplane.io
   names:
@@ -13,10 +13,10 @@ spec:
     - crossplane
     - managed
     - dynatrace
-    kind: MyType
-    listKind: MyTypeList
-    plural: mytypes
-    singular: mytype
+    kind: OnBoarding
+    listKind: OnBoardingList
+    plural: onboardings
+    singular: onboarding
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -35,7 +35,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: A MyType is an example API type.
+        description: A OnBoarding is an example API type.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -50,7 +50,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: A MyTypeSpec defines the desired state of a MyType.
+            description: A OnBoardingSpec defines the desired state of a OnBoarding.
             properties:
               deletionPolicy:
                 default: Delete
@@ -62,7 +62,8 @@ spec:
                 - Delete
                 type: string
               forProvider:
-                description: MyTypeParameters are the configurable fields of a MyType.
+                description: OnBoardingParameters are the configurable fields of a
+                  OnBoarding.
                 properties:
                   configurableField:
                     type: string
@@ -241,10 +242,11 @@ spec:
             - forProvider
             type: object
           status:
-            description: A MyTypeStatus represents the observed state of a MyType.
+            description: A OnBoardingStatus represents the observed state of a OnBoarding.
             properties:
               atProvider:
-                description: MyTypeObservation are the observable fields of a MyType.
+                description: OnBoardingObservation are the observable fields of a
+                  OnBoarding.
                 properties:
                   observableField:
                     type: string
